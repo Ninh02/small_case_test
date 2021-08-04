@@ -24,7 +24,7 @@ class FormBookRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
+            'name'=>'required|unique:books',
             'image'=>'required',
             'writerName'=>'required',
             'category_id'=>'required',
@@ -36,6 +36,7 @@ class FormBookRequest extends FormRequest
     {
         $messages = [
             'name.required'=>'Trường tên không được để trống',
+            'name.unique'=>'Trường tên không được trùng',
             'image.required'=>'Trường ảnh không được để trống',
             'writerName.required'=>'Trường tên tác giả không được để trống',
             'category_id.required'=>'Trường thể loại không được để trống',

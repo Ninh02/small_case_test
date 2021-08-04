@@ -302,7 +302,7 @@
                         <td><img src="{{asset('storage/'.$book->image)}}" width="70px"></td>
                         <td>{{$book->writerName}}</td>
                         <td>{{$book->category['name']}}</td>
-                        <td>{{$book->price}}</td>
+                        <td>{{number_format($book->price)}}</td>
                         <td>{{$book->description}}</td>
                         <td>
                             <a href="{{route('books.edit',$book->id)}}" class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
