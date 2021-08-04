@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[LoginController::class,'showFormLogin'])->name('login.showFormLogin');
 Route::post('/',[LoginController::class,'login'])->name('login');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 
 Route::prefix('/categories')->group(function (){
     Route::get('/',[CategoryController::class,'index'])->name('category.index');
