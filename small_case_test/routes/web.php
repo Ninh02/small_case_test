@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/',[LoginController::class,'showFormLogin'])->name('login.showFormLogin');
+Route::post('/',[LoginController::class,'login'])->name('login');
 
 Route::prefix('/categories')->group(function (){
     Route::get('/',[CategoryController::class,'index'])->name('category.index');
