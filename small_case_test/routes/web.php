@@ -16,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[LoginController::class,'showFormLogin'])->name('login.showFormLogin');
-Route::post('/',[LoginController::class,'login'])->name('login');
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+Route::get('/dashboard',[LoginController::class,'dashboard'])->name('dashboard');
+Route::get('/',[LoginController::class,'index'])->name('login');
+Route::post('/userLogin',[LoginController::class,'userLogin'])->name('user.login');
+Route::get('/registration',[LoginController::class,'registration'])->name('registration');
+Route::post('/userRegistration',[LoginController::class,'userRegistration'])->name('user.registration');
+Route::get('/logOut',[LoginController::class,'logOut'])->name('logOut');
 
 Route::prefix('/categories')->group(function (){
     Route::get('/',[CategoryController::class,'index'])->name('category.index');

@@ -268,7 +268,7 @@
 <div class="container-xl">
     <button type="button" class="btn btn-dark"><a href="{{route('category.index')}}">Danh sách thể loại</a></button>
     <button type="button" class="btn btn-dark"><a href="{{route('books.create')}}">Thêm mới sách</a></button>
-    <button type="button" class="btn btn-dark"><a href="{{route('logout')}}">Logout</a></button>
+    <button type="button" class="btn btn-dark"><a href="{{route('logOut')}}">Logout</a></button>
     <div class="table-responsive">
         <div class="table-wrapper">
 
